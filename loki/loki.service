@@ -1,0 +1,13 @@
+[Unit]
+Description = Loki
+After = network.target
+
+[Service]
+ExecStart = /usr/bin/loki-linux-amd64 -config.file /etc/loki/loki-local-config.yaml 
+Type = simple
+TimeoutStartSec = 0
+
+[Install]
+WantedBy = default.target
+
+
