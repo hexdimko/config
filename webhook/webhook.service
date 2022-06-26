@@ -1,0 +1,13 @@
+[Unit]
+Description = Loki
+After = network.target
+
+[Service]
+ExecStart = /usr/bin/webhook -hooks /etc/webhook/hooks.yaml -verbose 
+Type = simple
+TimeoutStartSec = 0
+
+[Install]
+WantedBy = default.target
+
+
